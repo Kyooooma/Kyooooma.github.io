@@ -257,7 +257,7 @@
     </div></div>
     </div>
 <h1 id="H-Hamilton-The-Musical"><a href="#H-Hamilton-The-Musical" class="headerlink" title="H - Hamilton - The Musical"></a>H - Hamilton - The Musical</h1><p>给出$n$个点两两之间的距离$L_{ij}$, 定义一个$n$的排列$p_1, p_2, …, p_n$的权值为<script type="math/tex">\sum L_{p_i p_{i+1}}</script></p>
-<p>现规定$p_i=i\ (i\ mod\ 2 = 0)$, 求最小的权值</p>
+<p>现规定$p_i=i (i mod 2 = 0)$, 求最小的权值</p>
 <p>费用流, 题意可转化为对于剩下的奇数点, 还有奇数个位置做一个最小权的完美匹配, 所以可以直接跑费用流解决, 边权为$i$点在$j$位置时与左右两点的距离和</p>
 <p>(复杂度手算了一下大概是$n^3$的, 而时限是0.5s, 没想到还真过了)</p>
 <div class="xControl">
@@ -499,8 +499,8 @@ K - KIAR...`;
                         
                         
                         
-                        <li><a target="_blank" rel="me" href="https://nya.one/@Candinya"><i class="fa fa fa-share-alt-square"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/Kyooooma"><i class="fa fa-github"></i></a></li>
                         
                     </ul>
                     <ul class="kratos-copyright">
@@ -589,5 +589,20 @@ K - KIAR...`;
 <!-- Extra support for third-party plguins  -->
 
 
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
