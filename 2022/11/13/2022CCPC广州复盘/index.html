@@ -24,7 +24,7 @@
 <meta property="og:description" content="经历上周的沈阳打铜之后，这周广州又打铜了，而且还是差点打铁的水平，哈哈。 热身赛热身赛看了眼四个题除了C题外全都做过，有三个是去年广州的原题，写了两个简单的之后，帆哥看了眼C说这不是一眼三分吗，不过我说我想写写B就让我上机了。B是2021广州的G题，是个莫队套线段树，我信誓旦旦的说这题我做过，结果我第二次写没过，哈哈。后来结束之后找了好久的原因发现是线段树合并的时候多求了个gcd导致TLE啦，并且">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-12T18:40:47.000Z">
-<meta property="article:modified_time" content="2022-11-13T18:06:18.206Z">
+<meta property="article:modified_time" content="2022-11-13T18:09:17.233Z">
 <meta property="article:author" content="Kyooma">
 <meta property="article:tag" content="比赛记录">
 <meta name="twitter:card" content="summary">
@@ -179,7 +179,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1448
+                        1257
                     
                     字
                 </li>
@@ -190,16 +190,14 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1668362778206"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1668362957233"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             <hr />
             <div itemprop="articleBody"><p>经历上周的沈阳打铜之后，这周广州又打铜了，而且还是差点打铁的水平，哈哈。</p>
 <h2 id="热身赛"><a href="#热身赛" class="headerlink" title="热身赛"></a>热身赛</h2><p>热身赛看了眼四个题除了C题外全都做过，有三个是去年广州的原题，写了两个简单的之后，帆哥看了眼C说这不是一眼三分吗，不过我说我想写写B就让我上机了。B是2021广州的G题，是个莫队套线段树，我信誓旦旦的说这题我做过，结果我第二次写没过，哈哈。后来结束之后找了好久的原因发现是线段树合并的时候多求了个gcd导致TLE啦，并且发现以前写的时候跑的慢是因为块大小算错了(少开了个更号)。改完之后在cf上跑了2s就AC了。</p>
-<h2 id="正式赛"><a href="#正式赛" class="headerlink" title="正式赛"></a>正式赛</h2><p>开局很顺利，队友很快找到了两个签到，15min的时候就AC完了，此时rk9。</p>
-<p>然后就是我正开看题，zty倒开，333lfy随机看题。然后zty找到了第三个题L，是个炉石传说的简单模拟题，于是333lfy直接开始打。结果打完没过样例，调了很久发现题意假了，改正后还是没过样例。最后发现对局中途的选择也是要记入概率中的，于是多传了个概率的参数之后AC了，此时比赛过去了2h，rk46。</p>
-<p>正式赛当天7点就起了(貌似是近半个月起的最早的)。然后去比赛场地布置完之后开始恰mdd早餐。开局zty就读错了签到题的题意，导致帆哥推了好久的样例推不出来开始质疑题意，于是理解正确题意之后就签完了第一个到。之后第二题由于我没看清楚题目的<strong>加粗</strong>部分导致判断的范围多了$2$然后就拿到了全场第一个WA。第三个签到看着像个博弈，玩了一会之后zty说这不是摁拿就完了然后就过了。之后，<strong>三个人就戴上了痛苦面具</strong>。</p>
+<h2 id="正式赛"><a href="#正式赛" class="headerlink" title="正式赛"></a>正式赛</h2><p>正式赛当天7点就起了(貌似是近半个月起的最早的)。然后去比赛场地布置完之后开始恰mdd早餐。开局zty就读错了签到题的题意，导致帆哥推了好久的样例推不出来开始质疑题意，于是理解正确题意之后就签完了第一个到。之后第二题由于我没看清楚题目的<strong>加粗</strong>部分导致判断的范围多了$2$然后就拿到了全场第一个WA。第三个签到看着像个博弈，玩了一会之后zty说这不是摁拿就完了然后就过了。之后，<strong>三个人就戴上了痛苦面具</strong>。</p>
 <p>我们先看了I题，我看了眼范围和输出就说这肯定是个树上背包，可是研究了半天都不会 <strong>有多个感染源</strong> 的情况。然后帆哥跟我们说题目给的每个点为感染源的概率是 $\frac{a_i}{\sum a_j}$ ， 所以肯定只有一个点是感染源，<strong>此时我和zty都不相信</strong>。又想了一会之后我感觉有多个感染源的情况是不可做的，然后试着把样例给的概率加起来，发现正好等于$1$，这时我才知道帆哥说的是对的。于是我开始想怎么处理只有一个感染源的情况（此时大概过了2h30min）。</p>
 <p>这中途队友看了M和C，对于M我感觉一眼数位dp，但可惜我上一次做到数位dp还是在上一次，已经完全不记得该怎么处理了，然后我问了问帆哥和zty怎么做数位dp，<strong>结果我们都不会</strong>。</p>
 <p>对于C题的构造帆哥有点想法，就上去敲了，<strong>此时我还在想怎么树上背包</strong>。之后我想了个转移式，在帆哥下机的途中敲了敲，这期间就是我们两个互相上下机，谁卡了就换另一个，调了好久我终于成功算出了以某个点为感染源时的答案，可惜按照我的做法得对$n$个点每个点为根跑一遍树上背包，时间复杂度来到了$O(n^3)$。此时帆哥的C题还在WA。之后我想了想好像能通过换根来计算其他点为根时的答案，但是敲到一半发现背包好像不能撤销，然后就寄了，<strong>我在望着代码发呆</strong>。</p>
@@ -298,7 +296,7 @@
                     <a class="tag-none-link" href="/tags/%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95/" rel="tag">比赛记录</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-11-13T18:06:18.206Z" itemprop="dateModified">最后编辑：2022-11-14</time>
+                    <time datetime="2022-11-13T18:09:17.233Z" itemprop="dateModified">最后编辑：2022-11-14</time>
                 </div>
             </div>
         </footer>
