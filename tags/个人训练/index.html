@@ -443,7 +443,7 @@ A - ECNU知多少华东师范大学大学软件工程学院创建于XXXX年1月�
                     </ul>
                     <ul class="kratos-copyright">
                         <div>
-                            <li>&copy; 2023 Kyooma's Blog 版权所有.</li>
+                            <li>&copy; 2024 Kyooma's Blog 版权所有.</li>
                             <li>本站已运行<span id="span_dt">Loading...</span></li>
                         </div>
                         <div>
@@ -527,5 +527,20 @@ A - ECNU知多少华东师范大学大学软件工程学院创建于XXXX年1月�
 <!-- Extra support for third-party plguins  -->
 
 
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
